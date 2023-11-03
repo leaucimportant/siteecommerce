@@ -1,4 +1,4 @@
-<header class="p-6 flex items-center justify-between md:px-0">
+<header class="p-6 flex items-center justify-between lg:px-0 border-b-2 border-b-Light-grayish-blue overflow-hidden">
     <!--TODO: fix logo alignment-->
     <div class="flex gap-5 items-center">
 
@@ -26,8 +26,8 @@
         <div class="logo">
             <img src="../../../assets/icons/logo.svg" alt="">
         </div>
-        <nav class="ml-6 text-sm font-bold opacity-40 hidden md:inline">
-            <ul class="flex gap-6">
+        <nav class="ml-6 text-sm font-bold hidden md:inline">
+            <ul class="flex gap-6 [&>li]:p-2 [&>li]:opacity-40 hover:[&>li]:hover-nav-li">
                 <li>Collections</li>
                 <li>Men</li>
                 <li>Women</li>
@@ -41,11 +41,12 @@
             <img class="md:h-5" src="../../../assets/icons/icon-cart.svg" alt="">
             <span class="absolute -top-1 -right-2 bg-Orange text-White text-[0.6rem] text-center w-5 h-3 rounded-md font-bold">3</span>
         </div>
-        <div>
-            <img class="h-6 md:h-12" src="../../../assets/images/image-avatar.png" alt="">
+        <div class="">
+            <img class="h-6 md:h-12 cursor-pointer hover:border-Orange hover:border-2 rounded-full" src="../../../assets/images/image-avatar.png" alt="">
         </div>
     </div>
 
+    <!-- cart menu -->
     <div *ngIf="isCartOpen" class="flex flex-col absolute z-10 top-20 left-0 md:left-auto right-0 m-auto md:m-[inherit] w-[95%] max-w-sm min-h-[16rem] bg-White rounded-lg shadow-xl">
         <div>
             <h2 class="p-6 font-bold">Cart</h2>
