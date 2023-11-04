@@ -13,7 +13,9 @@ module.exports = {
       "Light-grayish-blue": "hsl(223, 64%, 98%)",
       White: "hsl(0, 0%, 100%)",
       Black: "hsl(0, 0%, 0%)",
-      "Black-bg": "hsla(0, 0%, 0%, 0.75)"
+      "Black-bg": "hsla(0, 0%, 0%, 0.75)",
+
+      transparent: "transparent"
     }
   },
   plugins: [],

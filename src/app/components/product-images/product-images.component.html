@@ -1,6 +1,6 @@
-<section class="md:flex md:flex-col gap-6 md:w-full md:h-full md:justify-center">
+<section *ngIf="product" class="md:flex md:flex-col gap-6 md:w-full md:h-full md:justify-center">
     <div class="h-80 relative md:h-auto">
-        <img class="w-full h-full md:h-auto object-cover md:rounded-xl" src="../../../assets/images/image-product-1.jpg" alt="">
+        <img class="w-full h-full md:h-auto object-cover md:rounded-xl cursor-pointer hover:shadow-md" [src]="product.images[selected]" alt="">
 
         <button class="md:hidden absolute inset-y-1/2 left-4 translate-y-[-50%] w-10 h-10 bg-White rounded-full flex justify-center items-center">
             <img src="../../../assets/icons/icon-previous.svg" alt="">
@@ -12,18 +12,11 @@
 
     </div>
     <div class="hidden md:flex gap-6">
-        <div class="border-Orange border-2 rounded-xl">
+        <!-- <div class="border-Orange border-2 rounded-xl">
             <img class="opacity-30 rounded-xl" src="../../../assets/images/image-product-1-thumbnail.jpg" alt="">
-        </div>
-        <div>
-            <!-- TODO: hover components -->
-            <img class="rounded-xl hover:opacity-40" src="../../../assets/images/image-product-1-thumbnail.jpg" alt="">
-        </div>
-        <div>
-            <img class="rounded-xl" src="../../../assets/images/image-product-1-thumbnail.jpg" alt="">
-        </div>
-        <div>
-            <img class="rounded-xl" src="../../../assets/images/image-product-1-thumbnail.jpg" alt="">
+        </div> -->
+        <div *ngFor="let imageSmall of product.imagesSmall; index as i" class="border-2 rounded-xl overflow-hidden cursor-pointer" [ngClass]="i === selected ? 'border-Orange' : 'border-transparent' ">
+            <img class="hover:opacity-40" [src]="imageSmall" alt="" (click)="selectImage(i)">
         </div>
     </div>
 </section>
