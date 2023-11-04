@@ -1,21 +1,29 @@
-<section class="p-6 flex flex-col gap-3 md:h-full md:justify-center">
+<section *ngIf="product" class="p-6 flex flex-col gap-3 md:h-full md:justify-center">
     <header class="">
-        <h2 class="uppercase font-bold text-xs  tracking-widest text-Orange">sneaker company</h2>
+        <h2 class="uppercase font-bold text-xs  tracking-widest text-Orange">
+            {{product.brand ? product.brand : "sneaker company"}}
+        </h2>
     </header>
     <h1 class="font-bold text-3xl md:text-4xl">
-        Fall Limited Edition Sneakers
+        {{product.productTitle}}
     </h1>
     <p class="text-Dark-grayish-blue text-base">
-        These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.
+        {{product.description}}
     </p>
 
     <div class="flex md:flex-col justify-between items-center md:items-start my-4">
         <div class="flex items-center gap-5">
-            <p class="font-bold text-3xl">$125.00</p>
-            <span class="px-2 bg-Pale-orange rounded-sm text-Orange font-bold">50%</span>
+            <p class="font-bold text-3xl">
+                {{mainPrice | currency:"USD"}}
+            </p>
+            <span class="px-2 bg-Pale-orange rounded-sm text-Orange font-bold">
+                {{discount | percent}}
+            </span>
         </div>
         <!-- price-discount -->
-        <div class="font-bold text-Grayish-blue line-through">$250.00</div>
+        <div class="font-bold text-Grayish-blue line-through">
+            {{realPrice | currency:"USD"}}
+        </div>
     </div>
 
     <!-- product-info__buy -->
