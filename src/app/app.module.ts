@@ -7,6 +7,7 @@ import { HeaderComponent } from './layout/header/header.component';
 import { ProductImagesComponent } from './components/product-images/product-images.component';
 import { ProductInfoComponent } from './components/product-info/product-info.component';
 import { ProductPageComponent } from './components/product-page/product-page.component';
+import { ProductImageGalleryComponent } from './components/product-image-gallery/product-image-gallery.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ProductPageComponent } from './components/product-page/product-page.com
     HeaderComponent,
     ProductImagesComponent,
     ProductInfoComponent,
-    ProductPageComponent
+    ProductPageComponent,
+    ProductImageGalleryComponent
   ],
   imports: [
     BrowserModule,
