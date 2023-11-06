@@ -30,19 +30,19 @@
     <div class="flex flex-col gap-4 md:flex-row">
         <!-- product-quantity -->
         <div class="bg-Light-grayish-blue px-6 py-4 rounded-lg flex justify-between items-center md:basis-36">
-            <button>
+            <button [disabled]="quantity <= 0" (click)="removeProduct()">
                 <img src="../../../assets/icons/icon-minus.svg" alt="">
             </button>
             <div class="font-bold">
-                0
+                {{quantity}}
             </div>
-            <button>
+            <button (click)="addProduct()">
                 <img src="../../../assets/icons/icon-plus.svg" alt="">
             </button>
         </div>
         <!-- buy-product -->
         <!--TODO: fix icon-->
-        <button class="flex gap-4 flex-wrap font-bold bg-Orange text-White w-full md:w-auto justify-center px-6 py-4 rounded-lg flex-1 hover:opacity-40 shadow-2xl">
+        <button (click)="addProductToCart(product)" class="flex gap-4 flex-wrap font-bold bg-Orange text-White w-full md:w-auto justify-center px-6 py-4 rounded-lg flex-1 hover:opacity-40 shadow-2xl">
             <img class="" src="../../../assets/icons/icon-cart.svg">Add to cart
         </button>
     </div>

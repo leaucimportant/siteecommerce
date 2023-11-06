@@ -18,4 +18,12 @@ describe('HeaderComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should toggle isCartOpen when the cart icon is clicked', () => {
+    const cartIcon = fixture.nativeElement.querySelector('.cursor-pointer');
+    expect(component.isCartOpen).toBe(false);
+    cartIcon.click();
+    fixture.detectChanges();
+    expect(component.isCartOpen).toBe(true);
+  });
 });
