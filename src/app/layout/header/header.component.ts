@@ -9,26 +9,31 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  mockCartProduct: CartProduct = cartProducts;
   productsQuantity: number = 0;
   cartProducts: CartProduct[] = [];
 
-  constructor(private cartService:CartService) {}
+  isMenuOpen: boolean = false;
+  isCartOpen: boolean = false;
+
+  // for cart add animation
+  productAdded: boolean = false;
+
+  constructor(private cartService: CartService) {}
 
   ngOnInit(): void {
     this.cartService.cartList$.subscribe({
-      next: data => {
+      next: (data) => {
         this.cartProducts = [...data];
         this.calculateQuantity();
-      }
-    })
+        if (data.length > 0) {
+          this.cartAnimation();
+        }
+      },
+    });
 
     this.isMenuOpen = false;
     this.isCartOpen = false;
   }
-
-  isMenuOpen: boolean = false;
-  isCartOpen: boolean = false;
 
   calculateQuantity(): void {
     this.productsQuantity = this.cartProducts.reduce(
@@ -37,11 +42,19 @@ export class HeaderComponent implements OnInit {
     );
   }
 
-  deleteInCartProduct(id: number):void {
+  deleteInCartProduct(id: number): void {
     this.cartService.deleteInCartProduct(id);
   }
 
-  testt(id: number){
-    console.log(id)
+  cartAnimation(): void {
+    this.productAdded = true;
+    setTimeout(() => {
+      this.productAdded = false;
+    }, 200);
+    console.log();
+  }
+
+  testt() {
+    console.log("si")
   }
 }
