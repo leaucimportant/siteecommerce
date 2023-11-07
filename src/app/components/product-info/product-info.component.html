@@ -31,13 +31,13 @@
         <!-- product-quantity -->
         <div class="bg-Light-grayish-blue px-4 py-4 rounded-lg flex justify-between items-center md:basis-36">
             <button class="w-5 h-5" [ngClass]="quantity <= 0 ? 'cursor-not-allowed' : '' " [disabled]="quantity <= 0" (click)="removeProduct()">
-                <img class="m-auto hover:brightness-150" src="../../../assets/icons/icon-minus.svg" alt="">
+                <img class="m-auto hover:brightness-150" src="./assets/icons/icon-minus.svg" alt="icon minus">
             </button>
             <div class="font-bold">
                 {{quantity}}
             </div>
             <button class="w-5 h-5" (click)="addProduct()">
-                <img class="m-auto hover:brightness-150" src="../../../assets/icons/icon-plus.svg" alt="">
+                <img class="m-auto hover:brightness-150" src="./assets/icons/icon-plus.svg" alt="icon plus">
             </button>
         </div>
         <!-- buy-product -->
@@ -47,7 +47,7 @@
         <app-button
         (clickEvent)="addProductToCart(product)"
         text="Add to cart"
-        iconUrl="../../../assets/icons/icon-cart.svg"
+        iconUrl="./assets/icons/icon-cart.svg"
         [rounded]="true"
         iconStyle="brightness-[3]"
         ></app-button>

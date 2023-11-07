@@ -4,13 +4,13 @@
     <div class="flex gap-5 items-center">
 
         <button *ngIf="!isMenuOpen" (click)="isMenuOpen = !isMenuOpen" class="flex flex-col md:hidden">
-            <img src="../../../assets/icons/icon-menu.svg" alt="">
+            <img src="./assets/icons/icon-menu.svg" alt="icon menu">
         </button>
         <!-- mobile -->
         <div *ngIf="isMenuOpen" class="fixed inset-0 bg-Black-bg z-30 w-screen h-screen">
             <div class="bg-White z-50 relative w-full max-w-xs h-screen p-6">
                 <button (click)="isMenuOpen = !isMenuOpen" class="flex flex-col md:hidden">
-                    <img src="../../../assets/icons/icon-close.svg" alt="">
+                    <img src="./assets/icons/icon-close.svg" alt="icon menu clos">
                 </button>
                 <nav class="text-xl font-bold mt-16">
                     <ul class="flex flex-col gap-6">
@@ -26,7 +26,7 @@
 
         <div class="logo">
             <a href="#">
-                <img src="../../../assets/icons/logo.svg" alt="">
+                <img src="./assets/icons/logo.svg" alt="icon logo">
             </a>
         </div>
         <nav class="ml-6 text-sm font-bold hidden md:inline">
@@ -41,7 +41,7 @@
     </div>
     <div class="flex items-center gap-5 md:gap-10">
         <div [ngClass]="productAdded ? 'cart-add-animation' : '' " class="cursor-pointer relative z-50" (click)="isCartOpen = !isCartOpen">
-            <img class="md:h-5 hover:brightness-50" src="../../../assets/icons/icon-cart.svg" alt="">
+            <img class="md:h-5 hover:brightness-50" src="./assets/icons/icon-cart.svg" alt="icon cart">
             <span *ngIf="productsQuantity > 0"
                 class="absolute -top-1 -right-2 bg-Orange text-White text-[0.6rem] text-center w-5 h-3 rounded-md font-bold">
                 {{productsQuantity}}
@@ -49,7 +49,7 @@
         </div>
         <div>
             <img class="h-6 md:h-12 cursor-pointer hover:border-Orange hover:border-2 rounded-full"
-                src="../../../assets/images/image-avatar.png" alt="">
+                src="./assets/images/image-avatar.png" alt="avatar image">
         </div>
     </div>
 
@@ -71,7 +71,7 @@
                 <div class="flex flex-col w-full gap-3 max-h-44 overflow-auto">
                     <div *ngFor="let product of cartProducts" class="flex justify-between items-center w-full">
                         <div class="w-11">
-                            <img [src]="product.image" alt="">
+                            <img [src]="product.image" alt="image thumbnail">
                         </div>
                         <div class="font-normal">
                             <div>{{product.title}}</div>
@@ -84,7 +84,7 @@
                             </div>
                         </div>
                         <button [ngClass]="cartProducts.length > 3 ? 'mr-3' : '' " *ngIf="product.id" (click)="deleteInCartProduct(product.id)">
-                            <img class="hover:invert" src="../../../assets/icons/icon-delete.svg" alt="">
+                            <img class="hover:invert" src="./assets/icons/icon-delete.svg" alt="icon delete">
                         </button>
                     </div>
                 </div>
