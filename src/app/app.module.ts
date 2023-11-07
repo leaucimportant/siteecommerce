@@ -8,6 +8,7 @@ import { ProductImagesComponent } from './components/product-images/product-imag
 import { ProductInfoComponent } from './components/product-info/product-info.component';
 import { ProductPageComponent } from './components/product-page/product-page.component';
 import { ProductImageGalleryComponent } from './components/product-image-gallery/product-image-gallery.component';
+import { ButtonComponent } from './components/ui/button/button.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ProductImageGalleryComponent } from './components/product-image-gallery
     ProductImagesComponent,
     ProductInfoComponent,
     ProductPageComponent,
-    ProductImageGalleryComponent
+    ProductImageGalleryComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,

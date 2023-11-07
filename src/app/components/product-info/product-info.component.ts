@@ -36,7 +36,7 @@ export class ProductInfoComponent implements OnInit {
 
   addProductToCart(product: Product) {
     if (this.quantity > 0) {
-      // cheack the correct price (normal price or discount)
+      // check the correct price (normal price or discount)
       const productPrice = product.saleOffPrice ? product.saleOffPrice : product.price;
       // final price (including multipled)
       const finalPrice = productPrice * this.quantity;
@@ -58,5 +58,9 @@ export class ProductInfoComponent implements OnInit {
   }
   removeProduct(): void {
     this.quantity--;
+  }
+
+  testt(){
+    alert("HOLA")
   }
 }
