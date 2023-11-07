@@ -1,27 +1,59 @@
-# EcommerceAngular
+# Frontend Mentor - E-commerce product page solution
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Development server
+## Table of contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [Continued development](#continued-development)
+- [Author](#author)
 
-## Code scaffolding
+## Overview
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### The challenge
 
-## Build
+Users should be able to:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Open a lightbox gallery by clicking on the large product image
+- Switch the large product image by clicking on the small thumbnail images
+- Add items to the cart
+- View the cart and remove items from it
 
-## Running unit tests
+### Screenshot
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Desktop
+![desktop image 1](./readme_images/desktop1.jpeg)
+<!-- ![desktop image 2](./readme_images/desktop2.jpeg)
 
-## Running end-to-end tests
+## Mobile
+![mobile image 1](./readme_images/mobile1.png)
+![mobile image 2](./readme_images/mobile2.png) -->
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Links
 
-## Further help
+- Solution URL: [Add solution URL here](https://github.com/WolfMozart8/ecommerce-angular)
+- Live Site URL: [Add live site URL here](https://WolfMozart8.github.io/ecommerce-angular)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## My process
+
+### Built with
+
+- [Angular](https://angular.io/) - JS framework
+- [Tailwind](https://tailwindcss.com/) - CSS framework
+
+
+### Continued development
+
+I want to make a "complete" eccomerce page. It will fetch data from an api.
+
+## Author
+
+- Frontend Mentor - [@WolfMozart8](https://www.frontendmentor.io/profile/WolfMozart8)
+- Github - [Wolfmozart8](https://github.com/WolfMozart8)
