@@ -1,59 +1,36 @@
-# Frontend Mentor - E-commerce product page solution
+# eCommerce Angular Project
 
-This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a sample README file for an eCommerce project built with Angular.
 
-## Table of contents
+## Table of Contents
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [Continued development](#continued-development)
-- [Author](#author)
+- [Description](#description)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Overview
+## Description
 
-### The challenge
+Provide a brief overview of your eCommerce Angular project. Explain what it does, its purpose, and any unique features or technologies used.
 
-Users should be able to:
+## Features
 
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Open a lightbox gallery by clicking on the large product image
-- Switch the large product image by clicking on the small thumbnail images
-- Add items to the cart
-- View the cart and remove items from it
+List the key features of your eCommerce Angular project. This can include things like:
 
-### Screenshot
+- User authentication and authorization
+- Product catalog with search and filtering
+- Shopping cart functionality
+- Order management
+- Payment integration
+- Admin dashboard
 
-## Desktop
-![desktop image 1](./readme_images/desktop1.jpeg)
-<!-- ![desktop image 2](./readme_images/desktop2.jpeg)
+## Installation
 
-## Mobile
-![mobile image 1](./readme_images/mobile1.png)
-![mobile image 2](./readme_images/mobile2.png) -->
+L'installation passe par docker, exécuter les commandes ci-dessous pour lancer le site web.
 
-### Links
-
-- Solution URL: [Add solution URL here](https://github.com/WolfMozart8/ecommerce-angular)
-- Live Site URL: [Add live site URL here](https://WolfMozart8.github.io/ecommerce-angular)
-
-## My process
-
-### Built with
-
-- [Angular](https://angular.io/) - JS framework
-- [Tailwind](https://tailwindcss.com/) - CSS framework
-
-
-### Continued development
-
-I want to make a "complete" eccomerce page. It will fetch data from an api.
-
-## Author
-
-- Frontend Mentor - [@WolfMozart8](https://www.frontendmentor.io/profile/WolfMozart8)
-- Github - [Wolfmozart8](https://github.com/WolfMozart8)
+```
+docker build -t siteweb_ecommerce  .       
+docker run -p 80:5000 --name siteweb_ecommerce -d siteweb_ecommerce
+```
