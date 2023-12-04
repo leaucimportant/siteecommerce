@@ -4,7 +4,7 @@ import { Product } from 'src/app/models/Product';
 @Component({
   selector: 'app-product-images',
   templateUrl: './product-images.component.html',
-  styleUrls: ['./product-images.component.css']
+  styleUrls: ['./product-images.component.css'],
 })
 export class ProductImagesComponent implements OnInit {
   @Input() product: Product | null = null;
@@ -14,32 +14,30 @@ export class ProductImagesComponent implements OnInit {
   isGalleryOn: boolean = false;
 
   ngOnInit(): void {
-    if (this.product){
-      this.galleryLength = this.product.images.length;
+    if (this.product) {
+      this.galleryLength = 1;
     }
   }
 
   selectImage(index: number): void {
     this.selected = index;
   }
-  prevImg():void {
-    if (this.selected <= 0){
+  prevImg(): void {
+    if (this.selected <= 0) {
       this.selected = this.galleryLength - 1;
-    }
-    else{
+    } else {
       this.selected--;
     }
   }
-  nextImg():void {
-    if (this.selected >= this.galleryLength - 1){
+  nextImg(): void {
+    if (this.selected >= this.galleryLength - 1) {
       this.selected = 0;
-    }
-    else{
+    } else {
       this.selected++;
     }
   }
 
-  closeGallery(){
+  closeGallery() {
     this.isGalleryOn = false;
   }
 }

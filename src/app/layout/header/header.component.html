@@ -113,14 +113,14 @@
               <div>{{ product.title }}</div>
               <div class="flex">
                 <p *ngIf="product.quantity > 1">
-                  <span>{{ product.unitPrice | currency : "USD" }}</span> x
+                  <span>{{ product.unitPrice | currency : "EUR" }}</span> x
                   {{ product.quantity }}
                 </p>
                 <p
                   [ngClass]="product.quantity > 1 ? 'ml-[1ch]' : ''"
                   class="font-bold text-Black"
                 >
-                  {{ product.finalPrice | currency : "USD" }}
+                  {{ product.finalPrice | currency : "EUR" }}
                 </p>
               </div>
             </div>
@@ -138,7 +138,9 @@
           </div>
         </div>
 
-        <button class="bg-Orange w-full text-White p-4">Checkout</button>
+        <button class="bg-Orange w-full text-White p-4">
+          Valider ma commande
+        </button>
       </ng-template>
     </div>
   </div>

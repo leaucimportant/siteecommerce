@@ -11,7 +11,7 @@ import { CartService } from 'src/app/services/cart.service';
 export class ProductInfoComponent implements OnInit {
   @Input() product: Product | null = null;
 
-  quantity: number = 0;
+  quantity: number = 1;
 
   mainPrice: number | undefined;
   realPrice?: number | undefined;
@@ -37,16 +37,18 @@ export class ProductInfoComponent implements OnInit {
   addProductToCart(product: Product) {
     if (this.quantity > 0) {
       // check the correct price (normal price or discount)
-      const productPrice = product.saleOffPrice ? product.saleOffPrice : product.price;
+      const productPrice = product.saleOffPrice
+        ? product.saleOffPrice
+        : product.price;
       // final price (including multipled)
       const finalPrice = productPrice * this.quantity;
 
       const productToCart: CartProduct = {
-        title: product.productTitle,
+        title: product.name,
         quantity: this.quantity,
         unitPrice: productPrice,
         finalPrice: finalPrice,
-        image: product.images[0]
+        image: product.image,
       };
 
       this.cartService.addProductToCart(productToCart);
@@ -58,9 +60,5 @@ export class ProductInfoComponent implements OnInit {
   }
   removeProduct(): void {
     this.quantity--;
-  }
-
-  testt(){
-    alert("HOLA")
   }
 }

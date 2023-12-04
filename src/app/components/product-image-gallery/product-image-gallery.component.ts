@@ -1,4 +1,4 @@
-import { Component, Input,Output, OnInit, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Product } from 'src/app/models/Product';
 
 @Component({
@@ -8,14 +8,14 @@ import { Product } from 'src/app/models/Product';
 })
 export class ProductImageGalleryComponent implements OnInit {
   @Input() product: Product | undefined;
-  @Output() closeGallery = new EventEmitter<boolean>;
+  @Output() closeGallery = new EventEmitter<boolean>();
 
   selected: number = 0;
   galleryLength: number = 0;
 
   ngOnInit(): void {
     if (this.product) {
-      this.galleryLength = this.product?.images.length;
+      this.galleryLength = 1;
     }
   }
 
@@ -23,19 +23,17 @@ export class ProductImageGalleryComponent implements OnInit {
     this.selected = index;
   }
 
-  prevImg():void {
-    if (this.selected <= 0){
+  prevImg(): void {
+    if (this.selected <= 0) {
       this.selected = this.galleryLength - 1;
-    }
-    else{
+    } else {
       this.selected--;
     }
   }
-  nextImg():void {
-    if (this.selected >= this.galleryLength - 1){
+  nextImg(): void {
+    if (this.selected >= this.galleryLength - 1) {
       this.selected = 0;
-    }
-    else{
+    } else {
       this.selected++;
     }
   }
