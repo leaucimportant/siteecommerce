@@ -10,12 +10,9 @@ import { ProductService } from 'src/app/services/product.services';
   styleUrls: ['./product-page.component.css'],
 })
 export class ProductPageComponent {
-  constructor() {
-    this.products$ = this.productService.getProduct$(
-      this.route.snapshot.params['id']
-    );
-  }
   private productService = inject(ProductService);
   private route = inject(ActivatedRoute);
-  products$: Observable<Product[]>;
+  products$: Observable<Product[]> = this.productService.getProduct$(
+    this.route.snapshot.params['id']
+  );
 }

@@ -3,8 +3,7 @@ export type Product = {
   brand?: string;
   name: string;
   description: string;
-  // images: string[];
-  // imagesSmall: string[];
+  images: string[];
   image: string;
   price: number;
   isSaleOff: boolean;
