@@ -48,7 +48,7 @@ export class ProductInfoComponent implements OnInit {
         quantity: this.quantity,
         unitPrice: productPrice,
         finalPrice: finalPrice,
-        image: product.image,
+        image: product.images[0],
       };
 
       this.cartService.addProductToCart(productToCart);

@@ -12,7 +12,7 @@ import { ProductService } from 'src/app/services/product.services';
 export class ProductPageComponent {
   private productService = inject(ProductService);
   private route = inject(ActivatedRoute);
-  products$: Observable<Product[]> = this.productService.getProduct$(
+  product$: Observable<Product> = this.productService.getProduct$(
     this.route.snapshot.params['id']
   );
 }

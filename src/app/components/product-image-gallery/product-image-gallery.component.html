@@ -14,7 +14,7 @@
     <!-- TODO: zoom effect -->
     <img
       class="w-full h-full object-cover rounded-xl cursor-pointer hover:shadow-md"
-      [src]="product.image"
+      [src]="product.images[selected]"
       alt=""
     />
 
@@ -35,9 +35,16 @@
 
   <div class="flex gap-6 w-5/6 mx-auto">
     <div
-      class="border-2 rounded-xl overflow-hidden cursor-pointer border-Orange"
+      *ngFor="let imageSmall of product.images; index as i"
+      class="border-2 rounded-xl overflow-hidden cursor-pointer"
+      [ngClass]="i === selected ? 'border-Orange' : 'border-transparent'"
     >
-      <img class="hover:opacity-40" [src]="product.image" alt="" />
+      <img
+        class="hover:opacity-40"
+        [src]="imageSmall"
+        alt=""
+        (click)="selectImage(i)"
+      />
     </div>
   </div>
 </div>

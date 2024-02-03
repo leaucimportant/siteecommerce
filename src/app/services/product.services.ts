@@ -10,7 +10,7 @@ import { Product } from '../models/Product';
 export class ProductService {
   private http = inject(HttpClient);
 
-  getProduct$(id: string): Observable<Product[]> {
-    return this.http.get<Product[]>(`${environment.apiUrl}/articles/${id}`);
+  getProduct$(id: string): Observable<Product> {
+    return this.http.get<Product>(`${environment.apiUrl}/articles/${id}`);
   }
 }

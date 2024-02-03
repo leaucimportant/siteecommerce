@@ -15,7 +15,7 @@ export class ProductImagesComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.product) {
-      this.galleryLength = 1;
+      this.galleryLength = this.product.images.length;
     }
   }
 

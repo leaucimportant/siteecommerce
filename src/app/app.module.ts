@@ -5,6 +5,7 @@ import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ProductFeedbacksComponent } from './components/product-feedbacks/product-feedbacks.component';
 import { ProductImageGalleryComponent } from './components/product-image-gallery/product-image-gallery.component';
 import { ProductImagesComponent } from './components/product-images/product-images.component';
 import { ProductInfoComponent } from './components/product-info/product-info.component';
@@ -19,6 +20,7 @@ registerLocaleData(localeFr);
     ProductImagesComponent,
     ProductInfoComponent,
     ProductPageComponent,
+    ProductFeedbacksComponent,
     ProductImageGalleryComponent,
     ButtonComponent,
   ],

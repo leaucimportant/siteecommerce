@@ -1,0 +1,20 @@
+<section
+  *ngIf="product"
+  class="p-6 flex flex-col gap-3 md:h-full md:justify-center"
+>
+  <div *ngFor="let feedback of product.feedbacks">
+    <div class="flex items-center gap-3">
+      <div class="flex flex-col gap-1">
+        <h3 class="text-Dark-grayish-blue font-bold text-base">
+          {{ feedback.client }} - {{ feedback.note }}/5
+        </h3>
+        <p class="text-Dark-grayish-blue text-sm">
+          {{ feedback.date | date : "dd MMMM YYYY" }}
+        </p>
+      </div>
+    </div>
+    <p class="text-Dark-grayish-blue text-base">
+      {{ feedback.commentaire }}
+    </p>
+  </div>
+</section>
